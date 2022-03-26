@@ -2,32 +2,27 @@
 <html lang="eng">
 <head>
     <meta charset="utf-8">
-    <link href="css/styles.css" rel="stylesheet">
-    <title>Calendar</title>
-    <script type="text/javascript" src="js/scripts.js"></script>
+    <meta name="description" content="Календарь-органайзер, версия для печати на формат А4">
+    <title>Календарь-органайзер</title>
+    <link href="styles.css" rel="stylesheet">
+    <script type="text/javascript" src="scripts.js"></script>
 </head>
 <body>
 <div class="calendar">
     <table class="calendar__table" id="calendar_table">
+        <caption class="calendar__caption">
+            <label class="calendar__control">
+                <select class="calendar__select" id="month_select"></select>
+            </label>
+            <label class="calendar__control">
+                <input class="calendar__input" id="year_input">
+            </label>
+        </caption>
         <thead class="calendar__header" id="table_head"></thead>
         <tbody class="calendar__body" id="table_body"></tbody>
-        <tfoot class="calendar__footer">
-            <tr class="calendar__row">
-                <td colspan="3">
-                    <label class="calendar__label" for="month_select">Месяц:</label>
-                    <select id="month_select"></select>
-                    <label class="calendar__label" for="year_input">Год:</label>
-                    <input id="year_input">
-                </td>
-                <td colspan="4">
-                    <span class="calendar__signature">Created by Alexey Sholohov</span>
-                </td>
-            </tr>
-        </tfoot>
     </table>
     <script>
-      const calendar = new CreateCalendar()
-      calendar.init()
+      new CreateCalendar().init()
     </script>
 </div>
 </body>

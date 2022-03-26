@@ -1,4 +1,4 @@
-function CreateCalendar () {
+function CreateCalendar() {
   const date = new Date();
   const tableHeadRowElem = document.querySelector('#table_head');
   const monthsSelectElem = document.querySelector('#month_select');
@@ -48,13 +48,17 @@ function CreateCalendar () {
   }
 
   function setMonth(value) {
-    const monthNames = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
+    const monthNames = [
+      'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль',
+      'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
+    ];
 
     if (value === undefined) {
       value = date.getMonth()
 
       monthNames.forEach(function (item, index) {
         const optionElem = document.createElement('option')
+        optionElem.className = 'calendar__select-item'
         optionElem.innerHTML = item
         optionElem.value = String(index)
         monthsSelectElem.appendChild(optionElem)
@@ -74,7 +78,7 @@ function CreateCalendar () {
       value = date.getFullYear()
       yearInputElem.type = 'number'
       yearInputElem.min = 1970
-      yearInputElem.max = 3000
+      yearInputElem.max = 2100
       yearInputElem.addEventListener('change', function () {
         const currentVal = yearInputElem.value
         yearInputElem.value = Math.max(yearInputElem.min, Math.min(currentVal, yearInputElem.max))
@@ -87,7 +91,7 @@ function CreateCalendar () {
   }
 
   return {
-    init () {
+    init() {
       createHeaders()
       setMonth()
       setYear()

@@ -1,0 +1,98 @@
+html {
+  font-size: 1rem;
+}
+
+body {
+  font-size: 100%;
+  margin: 0;
+  padding: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.calendar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.calendar__table {
+  width: 100%;
+  height: calc(100% - 32px);
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.calendar__caption {
+  width: 100%;
+  background-color: rgb(126, 126, 126);
+}
+
+.calendar__control {
+  display: inline-block;
+  padding: 4px 0;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
+.calendar__input,
+.calendar__select {
+  background-color: transparent;
+  border: none;
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  line-height: inherit;
+  color: inherit;
+  outline: none;
+  text-align: inherit;
+}
+
+.calendar__input::placeholder,
+.calendar__select::placeholder {
+  color: #212529;
+  opacity: 0.4;
+}
+
+.calendar__select::-ms-expand {
+  display: none;
+}
+
+.calendar__select-item {
+  color: gray;
+  padding: 4px;
+  font-size: 18px;
+}
+
+.calendar__cell {
+  padding: 0.5em;
+  border: 1px solid rgb(126, 126, 126);
+  text-align: right;
+}
+
+.calendar__cell--head {
+  font-weight: normal;
+  font-size: 2vh;
+  background-color: rgb(126, 126, 126);
+  color: white;
+  border-color: white;
+}
+
+.calendar__cell--content {
+  vertical-align: top;
+  font-size: 2.5vh;
+}
+
+.calendar__cell--weekend {
+  background-color: rgb(236, 236, 236);
+}
