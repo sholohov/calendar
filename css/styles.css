@@ -1,0 +1,72 @@
+html {
+    font-size: 1rem;
+}
+
+body {
+    font-size: 100%;
+    margin: 0;
+    padding: 0.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.calendar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.calendar__table {
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+.calendar__cell {
+    padding: 0.5em;
+    border: 1px solid rgb(126, 126, 126);
+}
+
+.calendar__cell--head {
+    font-size: 2vh;
+    background-color: rgb(126, 126, 126);
+    color: white
+}
+
+.calendar__cell--content {
+    vertical-align: top;
+    font-size: 2.5vh;
+}
+
+.calendar__cell--weekend {
+    background-color: rgb(236, 236, 236);
+}
+
+.calendar__footer {
+    width: 100%;
+    background-color: rgb(126, 126, 126);
+    border: 1px solid rgb(126, 126, 126);
+    border-top: none;
+    font-size: 2vh;
+}
+
+.calendar__signature {
+    float: right;
+    color: white;
+    padding: 0 2vh;
+}
+
+.calendar__label {
+    padding: 1vh 2vh;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 2vh;
+}
+
+.calendar__btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
